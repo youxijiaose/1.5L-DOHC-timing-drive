@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-170 -20 380 320" font-family="'Segoe UI', Arial, sans-serif">
+  <defs>
+    <marker id="arrow-r" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#c62828"/>
+    </marker>
+    <marker id="arrow-b" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#1565c0"/>
+    </marker>
+    <marker id="arrow-g" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+      <path d="M0,0 L8,3 L0,6 Z" fill="#2e7d32"/>
+    </marker>
+    <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#eee" stroke-width="0.5"/>
+    </pattern>
+    <pattern id="teeth" width="4" height="4" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#37474f" opacity="0.2"/>
+    </pattern>
+    <linearGradient id="title-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1a237e"/>
+      <stop offset="100%" stop-color="#283593"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect x="-170" y="-20" width="380" height="320" fill="#fafafa" rx="8"/>
+  <rect x="-170" y="-20" width="380" height="320" fill="url(#grid)" rx="8"/>
+  
+  <!-- 标题 -->
+  <rect x="-150" y="-5" width="340" height="30" fill="url(#title-grad)" rx="4"/>
+  <text x="20" y="16" text-anchor="middle" fill="white" font-size="13" font-weight="bold">1.5L DOHC 正时驱动系统 | 静音链+短链方案 | 18000rpm</text>
+
+  <!-- ========== 主传动链 CR ↔ EX (红色) ========== -->
+  <!-- 紧边(驱动边): CR右下 → EX右上 -->
+  <line x1="14" y1="10" x2="-32" y2="244" stroke="#c62828" stroke-width="3.5" stroke-dasharray="7,3" marker-end="url(#arrow-r)"/>
+  <text x="-14" y="130" fill="#c62828" font-size="8" font-weight="bold" transform="rotate(46,-14,130)">静音链【紧边】</text>
+  
+  <!-- 松边: EX左下 → CR左上 -->
+  <line x1="-58" y1="256" x2="-14" y2="10" stroke="#ef9a9a" stroke-width="2.5" stroke-dasharray="5,4"/>
+
+  <!-- ========== 副传动短链 EX ↔ IN (绿色) ========== -->
+  <!-- 从EX(左)到IN(右)的短链 -->
+  <line x1="-25" y1="262" x2="23" y2="262" stroke="#2e7d32" stroke-width="3" stroke-dasharray="5,3" marker-end="url(#arrow-g)"/>
+  <!-- 回程 -->
+  <line x1="23" y1="274" x2="-25" y2="274" stroke="#81c784" stroke-width="2" stroke-dasharray="4,4"/>
+  
+  <!-- 副链标注 -->
+  <text x="-1" y="248" text-anchor="middle" fill="#2e7d32" font-size="8" font-weight="bold">短链 1:1</text>
+  <text x="-1" y="290" text-anchor="middle" fill="#2e7d32" font-size="7">60节 × 381mm</text>
+
+  <!-- ========== 图例 ========== -->
+  <g transform="translate(50, 252)">
+    <rect x="0" y="0" width="120" height="60" fill="white" stroke="#ccc" rx="4"/>
+    <line x1="8" y1="13" x2="28" y2="13" stroke="#c62828" stroke-width="3" stroke-dasharray="6,3"/>
+    <text x="32" y="17" fill="#333" font-size="9">主链紧边</text>
+    <line x1="8" y1="28" x2="28" y2="28" stroke="#ef9a9a" stroke-width="2" stroke-dasharray="4,4"/>
+    <text x="32" y="32" fill="#333" font-size="9">主链松边</text>
+    <line x1="8" y1="43" x2="28" y2="43" stroke="#2e7d32" stroke-width="2.5" stroke-dasharray="4,3"/>
+    <text x="32" y="47" fill="#333" font-size="9">短链 EX↔IN</text>
+  </g>
+
+  <!-- ========== 曲轴链轮 (19T, φ38.6) ========== -->
+  <g transform="translate(0, 15)">
+    <circle cx="0" cy="0" r="21" fill="#37474f" stroke="#263238" stroke-width="2"/>
+    <circle cx="0" cy="0" r="21" fill="url(#teeth)"/>
+    <!-- 齿示意 -->
+    <g stroke="#546e7a" stroke-width="1.2" opacity="0.5">
+      <line x1="0" y1="-21" x2="0" y2="-25"/>
+      <line x1="14.9" y1="-14.9" x2="17.7" y2="-17.7"/>
+      <line x1="21" y1="0" x2="25" y2="0"/>
+      <line x1="14.9" y1="14.9" x2="17.7" y2="17.7"/>
+      <line x1="0" y1="21" x2="0" y2="25"/>
+      <line x1="-14.9" y1="14.9" x2="-17.7" y2="17.7"/>
+      <line x1="-21" y1="0" x2="-25" y2="0"/>
+      <line x1="-14.9" y1="-14.9" x2="-17.7" y2="-17.7"/>
+    </g>
+    <circle cx="0" cy="0" r="9" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="4" fill="#90a4ae"/>
+    <text x="0" y="-29" text-anchor="middle" fill="#c62828" font-size="10" font-weight="bold">曲轴 CR</text>
+    <text x="0" y="34" text-anchor="middle" fill="#555" font-size="8">(0,0) | 19T (奇)</text>
+    <!-- 旋转方向 -->
+    <path d="M -5,-18 A 18,18 0 0,1 5,-18" fill="none" stroke="#c62828" stroke-width="1.2" marker-end="url(#arrow-r)"/>
+    <text x="0" y="-20" text-anchor="middle" fill="#c62828" font-size="6">CW</text>
+  </g>
+
+  <!-- ========== 排气凸轮轴链轮 (38T主链轮 + 30T副链轮) ========== -->
+  <g transform="translate(-49, 268)">
+    <!-- 副链轮 (30T) — 后面，稍小 -->
+    <circle cx="4" cy="0" r="32" fill="none" stroke="#2e7d32" stroke-width="1.5" stroke-dasharray="3,2"/>
+    
+    <!-- 主链轮 (38T) — 前面，稍大 -->
+    <circle cx="0" cy="0" r="40" fill="#37474f" stroke="#263238" stroke-width="2"/>
+    <circle cx="0" cy="0" r="40" fill="url(#teeth)"/>
+    <g stroke="#546e7a" stroke-width="1" opacity="0.4">
+      <line x1="0" y1="-40" x2="0" y2="-44"/>
+      <line x1="28.3" y1="-28.3" x2="31.1" y2="-31.1"/>
+      <line x1="40" y1="0" x2="44" y2="0"/>
+      <line x1="28.3" y1="28.3" x2="31.1" y2="31.1"/>
+      <line x1="0" y1="40" x2="0" y2="44"/>
+      <line x1="-28.3" y1="28.3" x2="-31.1" y2="31.1"/>
+      <line x1="-40" y1="0" x2="-44" y2="0"/>
+      <line x1="-28.3" y1="-28.3" x2="-31.1" y2="-31.1"/>
+    </g>
+    <circle cx="0" cy="0" r="17" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="6" fill="#90a4ae"/>
+    
+    <text x="-10" y="-52" text-anchor="middle" fill="#c62828" font-size="9" font-weight="bold">排气凸轮 EX</text>
+    <text x="-10" y="-42" text-anchor="middle" fill="#333" font-size="7">38T主链轮</text>
+    <text x="-10" y="52" text-anchor="middle" fill="#2e7d32" font-size="7">30T副链轮(后)</text>
+    <text x="-10" y="62" text-anchor="middle" fill="#555" font-size="7">(-49, 253.5)</text>
+  </g>
+
+  <!-- ========== 进气凸轮轴链轮 (30T副链轮) ========== -->
+  <g transform="translate(47, 268)">
+    <circle cx="0" cy="0" r="32" fill="#37474f" stroke="#263238" stroke-width="2"/>
+    <circle cx="0" cy="0" r="32" fill="url(#teeth)"/>
+    <g stroke="#546e7a" stroke-width="1" opacity="0.4">
+      <line x1="0" y1="-32" x2="0" y2="-36"/>
+      <line x1="22.6" y1="-22.6" x2="25.5" y2="-25.5"/>
+      <line x1="32" y1="0" x2="36" y2="0"/>
+      <line x1="22.6" y1="22.6" x2="25.5" y2="25.5"/>
+      <line x1="0" y1="32" x2="0" y2="36"/>
+      <line x1="-22.6" y1="22.6" x2="-25.5" y2="25.5"/>
+      <line x1="-32" y1="0" x2="-36" y2="0"/>
+      <line x1="-22.6" y1="-22.6" x2="-25.5" y2="-25.5"/>
+    </g>
+    <circle cx="0" cy="0" r="13" fill="#546e7a" stroke="#37474f" stroke-width="1.5"/>
+    <circle cx="0" cy="0" r="5" fill="#90a4ae"/>
+    
+    <text x="10" y="-44" text-anchor="middle" fill="#1565c0" font-size="9" font-weight="bold">进气凸轮 IN</text>
+    <text x="10" y="-34" text-anchor="middle" fill="#333" font-size="7">30T短链轮</text>
+    <text x="10" y="44" text-anchor="middle" fill="#555" font-size="7">(47, 253.5)</text>
+  </g>
+
+  <!-- ========== 张紧器 ========== -->
+  <!-- 主链张紧器(左侧松边) -->
+  <g transform="translate(-38, 140)">
+    <rect x="-6" y="-10" width="12" height="20" fill="#ff8f00" rx="3"/>
+    <rect x="-2" y="-16" width="4" height="6" fill="#e65100"/>
+    <text x="0" y="-22" text-anchor="middle" fill="#e65100" font-size="7" font-weight="bold">主链张紧器</text>
+    <text x="0" y="26" text-anchor="middle" fill="#e65100" font-size="6">液压式 12mm</text>
+  </g>
+
+  <!-- 副链张紧器(短链下方) -->
+  <g transform="translate(-1, 282)">
+    <rect x="-4" y="-6" width="8" height="12" fill="#ffb300" rx="2"/>
+    <text x="0" y="-10" text-anchor="middle" fill="#e65100" font-size="6">副链张</text>
+  </g>
+
+  <!-- ========== 导板 ========== -->
+  <path d="M6,24 L-18,216 L-8,218 L16,26 Z" fill="#66bb6a" fill-opacity="0.15" stroke="#388e3c" stroke-width="0.8"/>
+  <text x="-6" y="125" text-anchor="middle" fill="#388e3c" font-size="7" transform="rotate(46,-6,125)">导板</text>
+
+  <!-- ========== 喷嘴 ========== -->
+  <g fill="#7b1fa2">
+    <circle cx="-16" cy="26" r="2.5"/>
+    <text x="-16" y="18" text-anchor="middle" font-size="6">N₁</text>
+    <circle cx="-53" cy="222" r="2.5"/>
+    <text x="-60" y="214" text-anchor="middle" font-size="6">N₂</text>
+    <circle cx="-1" cy="236" r="2.5"/>
+    <text x="6" y="230" text-anchor="middle" font-size="6">N₃</text>
+  </g>
+
+  <!-- ========== 尺寸标注 ========== -->
+  <!-- CR→EX -->
+  <g stroke="#999" stroke-width="0.6" font-size="7">
+    <line x1="0" y1="15" x2="-49" y2="268" stroke-dasharray="3,3" opacity="0.4"/>
+    <text x="-32" y="148" fill="#888" transform="rotate(78,-32,148)">258.2mm</text>
+  </g>
+  <!-- EX↔IN -->
+  <g stroke="#999" stroke-width="0.6" font-size="7">
+    <line x1="-49" y1="268" x2="47" y2="268" stroke-dasharray="3,3" opacity="0.4"/>
+    <text x="-1" y="302" text-anchor="middle" fill="#888">96.0mm</text>
+  </g>
+
+  <!-- ========== 底部信息 ========== -->
+  <g transform="translate(-150, 296)">
+    <rect x="0" y="0" width="340" height="17" fill="#f5f5f5" rx="3"/>
+    <text x="8" y="11" fill="#555" font-size="6.5">静音链 6.35mm | CR(19T)→EX(38T) 110节×699mm 链速36.4m/s | EX(30T)→IN(30T) 60节×381mm</text>
+  </g>
+
+</svg>
